@@ -5,10 +5,10 @@
     <script src="../lib/cubemap.js"></script>
     <script src="../js/scene.js"></script>
     <script>
-      scene.onready = function (e) {
+      scene.onready(function (e) {
         scene.createCubemap("../assets/skyboxes/jailcell/jailcell_");
         scene.addHotRegion();
-      };
+      });
     </script>
   </head>
   <body>
