@@ -7,7 +7,16 @@
     <script>
       scene.onready(function (e) {
         scene.createCubemap("../assets/skyboxes/jailcell/jailcell_");
-        scene.addHotRegion();
+        scene.addHotRegion({
+            origin: [-80, 80, -80],
+            size: [80, 10, 200]
+          }, function (e) {
+            console.log('mouseover');
+          }, function (e) {
+            console.log('mouseout');
+          }, function (e) {
+            console.log('click');
+          });
       });
     </script>
   </head>
