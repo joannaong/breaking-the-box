@@ -2,15 +2,19 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<link rel="stylesheet" href="css/style.css" >
+	<link rel="stylesheet" href="css/ui.css" >
+	<link rel="stylesheet" href="css/game.css">
 	<script src="lib/soundjs-0.4.0.min.js"></script>
+	<script src="js/game.js"></script>
 	<script src="js/audio.js"></script>
 </head>
 <body>
-	<div id="cubemap"></div>
-	<script type="text/javascript" src="lib/cubemap.js"></script>
-	<script type="text/javascript">
-		var cubemap = new Cubemap("assets/skyboxes/jailcell/jailcell_",".png","cubemap", {width:window.innerWidth ,height:window.innerHeight, perspective:500});
-	</script>
+	<div class="page" id="beginPage">
+		<div class="heading">BREAKING THE BOX</div>
+		<h2>THE LIFE AND MIND OF MARK DEFRIEST</h2>
+		<div class="blueBtn">BEGIN</div>
+	</div>
+	
+	<div id="iframe-container"></div>
 </body>
 </html>
