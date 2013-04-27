@@ -13,4 +13,7 @@
     iframeContainer.appendChild(util.createIframe('scenes/cell.html'));
   };
 
+  window.game = {
+  };
+
 }());
