@@ -3,15 +3,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <link rel="stylesheet" href="../css/scene.css">
     <script src="../lib/cubemap.js"></script>
+    <script src="../lib/state-machine.js"></script>
     <script src="../js/scene.js"></script>
     <script>
       scene.onready(function (e) {
         scene.createCubemap("../assets/skyboxes/jailcell/jailcell_");
         scene.addHotRegion();
+        scene.setupStateMachine('music', 'pipe', 'drugs');
       });
     </script>
   </head>
   <body>
+
+    <div>
+      <button id="music"  onclick="scene.state.music();">Music</button>
+      <button id="pipe"  onclick="scene.state.pipe();">Pipe</button>
+      <button id="drugs" onclick="scene.state.drugs();">Drugs</button>
+    </div>
+
     <div id="cubemap"></div>
   </body>
 </html>
