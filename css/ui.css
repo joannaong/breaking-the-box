@@ -84,10 +84,24 @@ h2 {
     cursor:pointer;
 }
 
+.circleBtnExit{
+	width:48px;
+	height:68px;
+	background-image: url('../assets/img/btnexit.png');
+	margin: 0px auto;
+
+	-moz-user-select: none; 
+    -khtml-user-select: none; 
+    -webkit-user-select: none; 
+    -o-user-select: none;
+    cursor:pointer;
+}
+
 /*
 INTRO BG
 */
 #intro{
+	display:none;
 	position:absolute;
 	background-image: url('../assets/img/intro.jpg');
 	background-size: cover;
@@ -100,7 +114,7 @@ INTRO BG
 BEGIN PAGE
 */
 #beginPage{
-	/*display:none;*/
+	display:none;
 	position:absolute;
 	top: 40%;
 }
@@ -156,7 +170,7 @@ ENTER PAGE
 COUNTER
 */
 #counter{
-	/*display:none;*/
+	display:none;
 	position:absolute;
 	width:100%;
 	top: 35px;
@@ -176,12 +190,42 @@ COUNTER
 /*
 SCENE LABELS
 */
+#sceneLabel1{
+	background-image: url('../assets/img/legal.jpg');
+	background-size: cover;
+	width:100%;
+	height:100%;
+	background-repeat: no-repeat;
+}
+
+#sceneLabel2{
+	background-image: url('../assets/img/technical.jpg');
+	background-size: cover;
+	background-attachment: right;
+	width:100%;
+	height:100%;
+	background-repeat: no-repeat;
+}
+
+.sceneLabelContainer{
+	position:absolute;
+	width:100%;
+	top: 70%;
+}
+
 .sceneLabel{
 	display:none;
 	position:absolute;
-	top: 65%;
 	width:100%;
+	height:100%;
 }
+
+.sceneLabel .circleBtnExit{
+	position: absolute;
+	top:20px;
+	left:20px;
+}
+
 .sceneLabel .txt1{
 	font-family: 'Droid Sans', Arial, serif; font-weight: 400;
 	margin: 0px auto;
