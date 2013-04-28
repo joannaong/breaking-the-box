@@ -1,16 +1,24 @@
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-		<script src="lib/jquery-2.0.0.min.js"></script>
-        <script src="lib/soundjs-0.4.0.min.js"></script>
-		<script src="js/game.js"></script>
-		<script src="js/audio.js"></script>
-		<link rel="stylesheet" href="css/game.css">
-		<link rel="stylesheet" href="css/ui.css">
-	</head>
-	<body>
-		<div id="ui">
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<script src="http://vjs.zencdn.net/c/video.js"></script>
+	<script src="lib/jquery-2.0.0.min.js"></script>
+	<script src="lib/soundjs-0.4.0.min.js"></script>
+	<script src="js/game.js"></script>
+	<script src="js/audio.js"></script>
+	<link rel="stylesheet" href="css/game.css">
+	<link rel="stylesheet" href="css/ui.css">
+</head>
+<body>
 
+	<div id="videoModal">
+		<div id="modalbg"></div>
+		<video id="video" class="video-js" autoplay preload="auto" width="60%"
+		  data-setup="{}">
+		</video>
+	</div>
+
+	<div id="ui">
 		<div class="counter" id="counter">
 			<div class="label">TIME LEFT IN CELL</div>
 			<div class="time">6 years : 5 months : 27 days : 16 hours</div>
@@ -30,7 +38,7 @@
 			</div>
 		</div>
 
-		<div class="sceneLabel" id="sceneLabel1">
+		<div class="sceneLabel button" id="sceneLabel1">
 			<div class="sceneLabelContainer">
 				<div class="txt1"><span class="txtdroidbold">Be rational: </span>This is surely illegal.</div>
 				<div class="txt2">Click on the document you want to submit to the authorities.</div>
@@ -38,7 +46,7 @@
 			<div class="circleBtnExit"></div>
 		</div>
 
-		<div class="sceneLabel" id="sceneLabel2">
+		<div class="sceneLabel button" id="sceneLabel2">
 			<div class="sceneLabelContainer">
 				<div class="txt1"><span class="txtdroidbold">Face facts: </span>You're smarter than them.</div>
 				<div class="txt2">Can you outsmart the guard? Play the video and see.</div>
@@ -46,7 +54,7 @@
 			<div class="circleBtnExit"></div>
 		</div>
 
-		<div class="sceneLabel" id="sceneLabel3">
+		<div class="sceneLabel button" id="sceneLabel3">
 			<div class="sceneLabelContainer">
 				<div class="txt1"><span class="txtdroidbold">Lose your mind: </span>Find your freedom.</div>
 				<div class="txt2">Click on the items in the room that will help you escape mentally.</div>
@@ -154,13 +162,9 @@
 				<div class="circleBtnClose"></div>
 			</div>
 		</div>
-
-
 	</div>
 
-		<div id="iframe-container"></div>
+	<div id="iframe-container"></div>
 
-
-
-	</body>
+</body>
 </html>

@@ -74,7 +74,7 @@ AudioController ={
     playSound: function(id, loop){
       if (this.sounds[id] && this.sounds[id].loaded){
         //play(src,  [interrupt="none"], [delay=0], [offset=0], [loop=0], [volume=1], [pan=0])
-        this.sounds[id].instance = createjs.Sound.play(this.sounds[id].id,"none", 0, 0.25, loop?-1:0, 1)
+        this.sounds[id].instance = createjs.Sound.play(this.sounds[id].id,"none", 0, 0.25, loop?-1:0, 0.5)
       }
     },
     pauseSound:function(id){
