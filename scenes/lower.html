@@ -2,16 +2,14 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <link rel="stylesheet" href="../css/scene.css">
-
-    <script src="../lib/jquery-2.0.0.min.js"></script>
     <script src="../lib/cubemap.js"></script>
     <script src="../lib/state-machine.js"></script>
-    <script src="../js/intro_scene.js"></script>
+    <script src="../js/scene.js"></script>
     <script>
       scene.onready(function (e) {
 
         var buttons = [];
-        scene.createCubemap("../assets/skyboxes/jailcell/jailcell_");
+        scene.createCubemap("../assets/skyboxes/lower/lower_");
         buttons.push(scene.addHotRegion({
             origin: [-80, 80, -0],
             size: [80, 10, 200]
@@ -48,11 +46,10 @@
             scene.state.drugs();
           }));
         
-
-
-
         scene.setupStateMachine(buttons);
       });
+
+
     </script>
   </head>
   <body>
