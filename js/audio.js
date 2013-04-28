@@ -7,6 +7,46 @@ AudioController ={
         loop:true,
         instance:null,
         loaded:false
+      },
+      "cell":{
+        id:"cell",
+        src:"assets/audio/cell.mp3|assets/audio/cell.ogg",
+        autoplay:false,
+        loop:false,
+        instance:null,
+        loaded:false
+      },
+      "legal":{
+        id:"legal",
+        src:"assets/audio/legal.mp3|assets/audio/legal.ogg",
+        autoplay:false,
+        loop:false,
+        instance:null,
+        loaded:false
+      },
+      "technical":{
+        id:"technical",
+        src:"assets/audio/technical.mp3|assets/audio/technical.ogg",
+        autoplay:false,
+        loop:false,
+        instance:null,
+        loaded:false
+      },
+      "mental":{
+        id:"mental",
+        src:"assets/audio/mental.mp3|assets/audio/mental.ogg",
+        autoplay:false,
+        loop:false,
+        instance:null,
+        loaded:false
+      },
+      "radio":{
+        id:"radio",
+        src:"assets/audio/radio.mp3|assets/audio/radio.ogg",
+        autoplay:false,
+        loop:true,
+        instance:null,
+        loaded:false
       }
     },
     loadSounds: function(){

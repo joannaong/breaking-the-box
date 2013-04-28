@@ -47,6 +47,15 @@ h2 {
 	font-size: 21px;
 	line-height: 42px;
 
+	-moz-user-select: none; 
+    -khtml-user-select: none; 
+    -webkit-user-select: none; 
+    -o-user-select: none;
+    cursor:pointer;
+}
+
+.blueBtn:hover{
+	background-color: #00BBEE;
 }
 
 .circleBtnOK{
@@ -54,6 +63,12 @@ h2 {
 	height:48px;
 	background-image: url('../assets/img/btnok.png');
 	margin: 0px auto;
+
+	-moz-user-select: none; 
+    -khtml-user-select: none; 
+    -webkit-user-select: none; 
+    -o-user-select: none;
+    cursor:pointer;
 }
 
 .circleBtnClose{
@@ -61,6 +76,12 @@ h2 {
 	height:68px;
 	background-image: url('../assets/img/btnclose.png');
 	margin: 0px auto;
+
+	-moz-user-select: none; 
+    -khtml-user-select: none; 
+    -webkit-user-select: none; 
+    -o-user-select: none;
+    cursor:pointer;
 }
 
 /*
