@@ -1,11 +1,24 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 
+.txtdroid{
+	font-family: 'Droid Sans', Arial, serif; font-weight: 400;
+}
+.txtdroidbold{
+	font-family: 'Droid Sans', Arial, serif; font-weight: 700;
+}
+
 body{
 	font-family: 'Droid Sans', Arial, serif; font-weight: 400;
 	width:100%;
 	height:100%;
 	color:#ffffff;
 	text-align: center;
+}
+
+a,a:visited{
+	color:#0099CC;
+	text-decoration: none;
+	font-size: 17px;
 }
 
 h1 {
@@ -36,14 +49,22 @@ h2 {
 
 }
 
-div#beginPage{
-	display:none;
-	
-	width:100%;
-	padding-top: 40%;
+.circleBtnOK{
+	width:48px;
+	height:48px;
+	background-image: url('../assets/img/btnok.png');
+	margin: 0px auto;
 }
 
-div#beginPage .heading{
+/*
+BEGI PAGE
+*/
+div#beginPage{
+	display:none;
+	top: 40%;
+}
+
+div#beginPage .titleText{
 	font-family: 'Droid Sans', Arial, serif; font-weight: 700;
 
 	margin: 0px auto;
@@ -60,4 +81,138 @@ div#beginPage .heading{
 
 div#beginPage .blueBtn{
 	margin-top: 90px;
+}
+
+
+/*
+ENTER PAGE
+*/
+#enterPage{
+	display:none;
+	top: 40%;
+}
+#enterPage .txt1{
+	font-family: 'Droid Sans', Arial, serif; font-weight: 400;
+	margin: 0px auto;
+	width:100%;
+	line-height:15px;
+	font-size: 19px;
+	line-height: 86px;
+}
+#enterPage .txt2{
+	font-family: 'Droid Sans', Arial, serif; font-weight: 400;
+	margin: 0px auto;
+	width:100%;
+	line-height: 6px;
+	font-size: 56px;
+}
+#enterPage .blueBtn{
+	margin-top: 135px;
+}
+
+/*
+COUNTER
+*/
+.counter{
+
+}
+
+.counter .label{
+	font-family: Georgia, serif;
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+
+.counter .time{
+	font-family: 'Droid Sans', Arial, serif; font-weight: 400;
+	font-size: 19px;
+}
+
+
+/*
+SCENE LABELS
+*/
+.sceneLabel{
+	display:none;
+	position:absolute;
+	top: 65%;
+	width:100%;
+}
+.sceneLabel .txt1{
+	font-family: 'Droid Sans', Arial, serif; font-weight: 400;
+	margin: 0px auto;
+	width:100%;
+	line-height:15px;
+	font-size: 33px;
+}
+
+.sceneLabel .txt2{
+	font-family: 'Droid Sans', Arial, serif; font-weight: 400;
+	margin: 0px auto;
+	width:100%;
+	line-height: 60px;
+	font-size: 17px;
+}
+
+/*
+CAUGHT SCREENS
+*/
+.caughtScreen{
+	display:none;
+	position:absolute;
+	width:100%;
+	height: 100%;
+	background-color: #000000;
+}
+
+.caughtScreenContainer{
+	position:absolute;
+	width:100%;
+	height: 412px;
+	margin-top: -206px;
+	top:50%;
+	background-color: #000000;
+}
+
+.caughtScreen h2{
+	font-family: 'Droid Sans', Arial, serif; font-weight: 700;
+	font-size: 40px;
+	color:#FF0000;
+	margin: 0px auto;
+	padding-bottom: 15px;
+}
+
+.caughtScreen p{
+	display: block;
+	font-size: 17px;
+	width:581px;
+	margin: 0px auto;
+	padding-bottom: 10px;
+}
+
+.caughtScreen .txt1{
+	font-family: 'Droid Sans', Arial, serif; font-weight: 400;
+	margin: 0px auto;
+	width:100%;
+	height:190px;
+	font-size: 33px;
+}
+.caughtScreen .divider{
+	width:693px;
+	margin: 0px auto;
+	height: 1px;
+	overflow: visible;
+}
+
+.caughtScreen .divider img{
+	margin: -80px 0px 0px -480px;
+}
+
+.caughtScreen .txt2{
+	font-family: 'Droid Sans', Arial, serif; font-weight: 400;
+	margin: 0px auto;
+	width:100%;
+	font-size: 17px;
+	padding-top: 39px;
+	padding-bottom: 20px;
 }
