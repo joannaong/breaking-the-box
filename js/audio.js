@@ -51,7 +51,7 @@ AudioController ={
     },
     loadSounds: function(){
       createjs.Sound.addEventListener("loadComplete", createjs.proxy(this.loadHandler, this));
-      createjs.Sound.registerSound(this.sounds["ambient"].src, this.sounds["ambient"].id); 
+      createjs.Sound.registerSound(this.sounds["ambient"].src, this.sounds["ambient"].id);
     },
     loadHandler: function(e) {
       console.log("loaded",e.id," autoplay?",this.sounds[e.id].autoplay)
@@ -59,6 +59,16 @@ AudioController ={
         console.log("play",e.id)
         this.sounds[e.id].loaded = true;
         this.playSound(e.id, this.sounds[e.id].loop);
+      }
+      
+      // hack: preload ambient first, then others
+      if(e.id == "ambient"){
+        console.log("ambient loaded, loading others now.");
+        createjs.Sound.registerSound(this.sounds["cell"].src, this.sounds["cell"].id);
+        createjs.Sound.registerSound(this.sounds["legal"].src, this.sounds["legal"].id);
+        createjs.Sound.registerSound(this.sounds["technical"].src, this.sounds["technical"].id);
+        createjs.Sound.registerSound(this.sounds["mental"].src, this.sounds["mental"].id);
+        createjs.Sound.registerSound(this.sounds["radio"].src, this.sounds["radio"].id);
       }
     },
     playSound: function(id, loop){
