@@ -27,13 +27,15 @@ html, body {
   transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
-  opacity: 0.0;
-  background: url('../assets/ui/checkmark.png');
+  opacity: 0.15;
+  background: #0f3;
   background-size: 100% 100%;
 }
 
 .hot-region:hover .hot-region-face {
   cursor: pointer;
+  opacity: 0.25;
+
 }
 
 
