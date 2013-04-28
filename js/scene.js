@@ -15,8 +15,6 @@
 
   var gamestate = {
     create: function(buttons_elements){
-
-          console.log(buttons_elements);
           var buttons  = buttons_elements;
           var fsm = StateMachine.create({
           events: [
@@ -31,7 +29,7 @@
             onstart:    function(event, from, to) { disableHotSpots(); enableHotSpot('music'); },
             onmusic:    function(event, from, to) { disableHotSpots(); enableHotSpot('pipe');  },
             onpipe:     function(event, from, to) { disableHotSpots(); enableHotSpot('drugs'); },
-            ondrugs:    function(event, from, to) { setEndState() },
+            ondrugs:    function(event, from, to) { setEndState(); },
 
             onlookforpipe:    function(event, from, to) { buttons['pipe'].style.visibility = "visible" },
             onlookfordrugs:    function(event, from, to) { buttons['drugs'].style.visibility = "visible" },

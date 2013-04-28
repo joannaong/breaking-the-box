@@ -8,28 +8,13 @@
     }
   };
 
-  /*
-  function Minigame() {
-    this.document = null;
-  }
-
-  Minigame.prototype.init = function(iframe) {
-    this.document = iframe.contentDocument;
-    console.log(this.document);
-    this.gameArea = this.document.getElementById("gameArea");
-  }
-
-  Minigame.prototype.jiggle = function() {
-    header = this.document.createElement("h1");
-    header.innerHTML = "HOWDY!";
-    this.gameArea.appendChild(header);
-  }
-  */
-
   var bInitalState  = true;
 
   window.onload = function (e) {
-    this.game.showLowerScene();
+    this.game.showCellScene();
+    
+    // Show inital state of app, and wait for call to show the first cell scene.
+
   };
 
   window.game = {
@@ -45,7 +30,6 @@
     },
     showLowerScene: function(){
       bInitalState  = false;
-      var iframeContainer = document.querySelector('#iframe-container');
       var cellFrame = util.createIframe('scenes/lower.html');
       $(iframeContainer).fadeOut(function(){
         $(iframeContainer).empty();  
@@ -54,12 +38,24 @@
       });
     },
 
+    hideIframeContent:function( f )
+    {
+      console.log("rawr....");
+      // $(iframeContainer).fadeOut(function(){
+      //   f();
+      // });
+    },
+
+    playEndVideo:function(){
+      console.log("playing end video");
+    },
+
     onMiniGameOver:function()
     {
       if(bInitalState ){
         this.showLowerScene();
       }else{
-
+          //this.hideIframeContent(this.playEndVideo);
       }
     }
   };

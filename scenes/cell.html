@@ -11,7 +11,8 @@
       scene.onready(function (e) {
 
         var buttons = [];
-        scene.createCubemap("../assets/skyboxes/jailcell/jailcell_");
+
+        scene.createCubemap("../assets/skyboxes/jailcell/jailcell_", {yaw:-367.5,pitch:-413.75});
         buttons.push(scene.addHotRegion({
             origin: [-80, 80, -0],
             size: [80, 10, 200]
@@ -40,16 +41,34 @@
             origin: [30, 80, 10],
             size: [20, 50, 20]
           }, function (e) {
+            //console.log('mouseover');
+          }, function (e) {// mouse out
+
+            if(this.style.visibility != "hidden"){
+            };
+          }, function (e) {
+              scene.state.drugs();
+          }));
+          
+
+
+
+
+        // Checkmark icons
+        /*
+        scene.createQuad({
+            origin: [240, 70, -50],
+            size: [50, 50, 50],
+            style: 'doc-one'
+          }, function (e) {
             console.log('mouseover');
           }, function (e) {// mouse out
             if(this.style.visibility != "hidden"){
             };
           }, function (e) {
             scene.state.drugs();
-          }));
-        
-
-
+          });
+*/
 
         scene.setupStateMachine(buttons);
       });

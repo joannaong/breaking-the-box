@@ -35,3 +35,15 @@ html, body {
   opacity: 0.5;
   cursor: pointer;
 }
+
+
+.doc-one{
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: url('../assets/ui/checkmark.png');
+  transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  background-size: 100% 100%;
+}
