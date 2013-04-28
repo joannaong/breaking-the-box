@@ -56,6 +56,13 @@ h2 {
 	margin: 0px auto;
 }
 
+.circleBtnClose{
+	width:48px;
+	height:68px;
+	background-image: url('../assets/img/btnclose.png');
+	margin: 0px auto;
+}
+
 /*
 BEGI PAGE
 */
@@ -216,3 +223,60 @@ CAUGHT SCREENS
 	padding-top: 39px;
 	padding-bottom: 20px;
 }
+
+/*
+ITEM SCREENS
+*/
+
+.itemScreen{
+	display:none;
+	position:absolute;
+	width:100%;
+	height: 100%;
+	background-color: #000000;
+}
+
+.itemScreenContainer{
+	position:absolute;
+	width:770px;
+	height: 347px;
+	margin-top: -206px;
+	margin-left: -385px;
+	top:50%;
+	left:50%;
+	background-color: #000000;
+}
+
+.itemScreen .txt1{
+	float:left;
+}
+
+.itemScreen .txt2{
+	text-align: left;
+	float:left;
+	padding-left:30px;
+	width:440px;
+}
+
+.itemScreen h2{
+	font-family: 'Droid Sans', Arial, serif; font-weight: 700;
+	color:#0099CC;
+	font-size: 22px;
+	margin-top:0px;
+}
+
+.itemScreen .txt2 h1{
+	font-family: 'Droid Sans', Arial, serif; font-weight: 400;
+	font-size: 33px;
+}
+
+.itemScreen .txt2 p{
+	font-size: 19px;
+}
+
+.itemScreen .circleBtnClose{
+	position: absolute;
+	top:-45px;
+	right:0;
+}
+
