@@ -7,28 +7,50 @@
     <script src="../js/scene.js"></script>
     <script>
       scene.onready(function (e) {
+
+        var buttons = [];
         scene.createCubemap("../assets/skyboxes/jailcell/jailcell_");
-        scene.addHotRegion({
-            origin: [-80, 80, -80],
+        buttons.push(scene.addHotRegion({
+            origin: [-80, 80, -0],
             size: [80, 10, 200]
           }, function (e) {
             console.log('mouseover');
+          }, function (e) {// mouse out
+            if(this.style.visibility != "hidden"){
+            };
           }, function (e) {
-            console.log('mouseout');
+            scene.state.music();
+          }));
+        
+        buttons.push(scene.addHotRegion({
+            origin: [85, 80, -100],
+            size: [20, 60, 20]
           }, function (e) {
-            console.log('click');
-          });
-        scene.setupStateMachine('music', 'pipe', 'drugs');
+            console.log('mouseover');
+          }, function (e) {// mouse out
+            if(this.style.visibility != "hidden"){
+            };
+          }, function (e) {
+            scene.state.pipe();
+          }));
+
+        buttons.push(scene.addHotRegion({
+            origin: [30, 80, 10],
+            size: [20, 50, 20]
+          }, function (e) {
+            console.log('mouseover');
+          }, function (e) {// mouse out
+            if(this.style.visibility != "hidden"){
+            };
+          }, function (e) {
+            scene.state.drugs();
+          }));
+        
+        scene.setupStateMachine(buttons);
       });
     </script>
   </head>
   <body>
-
-    <div>
-      <button id="music"  onclick="scene.state.music();">Music</button>
-      <button id="pipe"  onclick="scene.state.pipe();">Pipe</button>
-      <button id="drugs" onclick="scene.state.drugs();">Drugs</button>
-    </div>
 
     <div id="cubemap"></div>
   </body>
