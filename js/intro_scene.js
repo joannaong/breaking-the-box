@@ -141,11 +141,11 @@
       origin[1] += _cubemap.box_size/2;
 
       var faceContainer = document.createElement('div');
-      //addToContainer([size[0], size[1]], buildFace('translate3d('+ (-size[0]/2) +'px, '+ (-size[1]/2) +'px, '+ (-size[2]/2) +'px)'));
-      //addToContainer([size[0], size[1]], buildFace('translate3d('+ (-size[0]/2) +'px, '+ (-size[1]/2) +'px, '+ (size[2]/2) +'px)'));
-      //addToContainer([size[0], size[2]], buildFace('translate3d('+ (-size[0]/2) +'px, '+ (-size[2]/2 - size[1]/2) +'px, '+ 0 +'px) rotateX(90deg)'));
-      //addToContainer([size[0], size[2]], buildFace('translate3d('+ (-size[0]/2) +'px, '+ (-size[2]/2 + size[1]/2) +'px, '+ 0 +'px) rotateX(90deg)'));
-      //addToContainer([size[2], size[1]], buildFace('translate3d('+ (-size[2]/2+size[0]/2) +'px, '+ (-size[1]/2) +'px, '+ 0 +'px) rotateY(90deg)'));
+      addToContainer([size[0], size[1]], buildFace('translate3d('+ (-size[0]/2) +'px, '+ (-size[1]/2) +'px, '+ (-size[2]/2) +'px)'));
+      addToContainer([size[0], size[1]], buildFace('translate3d('+ (-size[0]/2) +'px, '+ (-size[1]/2) +'px, '+ (size[2]/2) +'px)'));
+      addToContainer([size[0], size[2]], buildFace('translate3d('+ (-size[0]/2) +'px, '+ (-size[2]/2 - size[1]/2) +'px, '+ 0 +'px) rotateX(90deg)'));
+      addToContainer([size[0], size[2]], buildFace('translate3d('+ (-size[0]/2) +'px, '+ (-size[2]/2 + size[1]/2) +'px, '+ 0 +'px) rotateX(90deg)'));
+      addToContainer([size[2], size[1]], buildFace('translate3d('+ (-size[2]/2+size[0]/2) +'px, '+ (-size[1]/2) +'px, '+ 0 +'px) rotateY(90deg)'));
       addToContainer([size[2], size[1]], buildFace('translate3d('+ (-size[2]/2-size[0]/2) +'px, '+ (-size[1]/2) +'px, '+ 0 +'px) rotateY(90deg)'));
 
       util.applyTransform(faceContainer, 'translate3d('+ (origin[0]) +'px, '+ (origin[1]) +'px, '+ (origin[2]) +'px)');

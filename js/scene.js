@@ -117,11 +117,13 @@
       faceContainer.onclick = mouseClickCallback;
       return faceContainer;
     },
-    createCubemap: function (assetPrefix) {
+    createCubemap: function (assetPrefix, options) {
       _cubemap = new Cubemap(assetPrefix, ".png", "cubemap", {
         width: window.innerWidth,
         height: window.innerHeight,
-        perspective: 500});
+        perspective: 500,
+        pitch:options.pitch,
+        yaw: options.yaw});
     },
 
     setupStateMachine: function( btns ){

@@ -12,46 +12,69 @@
 
         var buttons = [];
 
-        scene.createCubemap("../assets/skyboxes/jailcell/jailcell_", {yaw:-367.5,pitch:-413.75});
-        buttons.push(scene.addHotRegion({
-            origin: [-80, 80, -0],
-            size: [80, 10, 200]
-          }, function (e) {
-            console.log('mouseover');
-          }, function (e) {// mouse out
-            if(this.style.visibility != "hidden"){
-            };
-          }, function (e) {
-            scene.state.music();
-          }));
-        
-        buttons.push(scene.addHotRegion({
-            origin: [85, 80, -100],
-            size: [20, 60, 20]
-          }, function (e) {
-            console.log('mouseover');
-          }, function (e) {// mouse out
-            if(this.style.visibility != "hidden"){
-            };
-          }, function (e) {
-            scene.state.pipe();
+        scene.createCubemap("../assets/skyboxes/jailcell/jailcell_", {yaw:-314.25,pitch:-395.5});
+         
+        var checkmarks = [];        
+        checkmarks.push(scene.createQuad({
+            origin: [100, 30, -45],
+            size: [0, 20, 20],
+            style: 'doc-one'
           }));
 
+      checkmarks.push(scene.createQuad({
+            origin: [40, 80, 40],
+            size: [20, 0, 20],
+            style: 'doc-one'
+          }));
+
+      checkmarks.push(scene.createQuad({
+            origin: [-30, 80, -35],
+            size: [20, 0, 20],
+            style: 'doc-one'
+          }));
+
+        
         buttons.push(scene.addHotRegion({
-            origin: [30, 80, 10],
-            size: [20, 50, 20]
+            origin: [100, 30, -45],
+            size: [1, 20, 20]
+          }, function (e) {
+            console.log('mouseover');
+          }, function (e) {// mouse out
+            if(this.style.visibility != "hidden"){
+            };
+          }, function (e) {
+            checkmarks[0].style.opacity = 1;
+            scene.state.music();
+          }));
+
+       buttons.push(scene.addHotRegion({
+            origin: [40, 80, 40],
+            size: [20, 1, 20]
           }, function (e) {
             //console.log('mouseover');
           }, function (e) {// mouse out
 
             if(this.style.visibility != "hidden"){
             };
+          }, function (e) {            
+            checkmarks[1].style.opacity = 1;
+            scene.state.pipe();
+          }));
+        
+        buttons.push(scene.addHotRegion({
+            origin: [-30, 80, -35],
+            size: [20, 1, 20]
           }, function (e) {
-              scene.state.drugs();
+            console.log('mouseover');
+          }, function (e) {// mouse out
+            if(this.style.visibility != "hidden"){
+            };
+          }, function (e) {
+            checkmarks[2].style.opacity = 1;
+            scene.state.drugs();
           }));
           
-
-
+      
 
 
         // Checkmark icons

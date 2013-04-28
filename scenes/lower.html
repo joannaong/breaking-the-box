@@ -9,9 +9,10 @@
       scene.onready(function (e) {
 
         var buttons = [];
-        scene.createCubemap("../assets/skyboxes/lower/lower_");
+        scene.createCubemap("../assets/skyboxes/lower/lower_", {yaw:-68.5,pitch:-17.75});
+
         buttons.push(scene.addHotRegion({
-            origin: [-80, 80, -0],
+            origin: [-80, 10, -0],
             size: [80, 10, 200]
           }, function (e) {
             console.log('mouseover');
@@ -23,8 +24,8 @@
           }));
         
         buttons.push(scene.addHotRegion({
-            origin: [85, 80, -100],
-            size: [20, 60, 20]
+            origin: [85, 20, -100],
+            size: [20, 100, 60]
           }, function (e) {
             console.log('mouseover');
           }, function (e) {// mouse out
