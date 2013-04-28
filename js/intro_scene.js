@@ -48,6 +48,7 @@
 
         var enableHotSpot = function(id){
           buttons[id].style.visibility = "visible";
+          parent.window.game.showModal("intro_" + id);
         }
 
         var setEndState = function(){
