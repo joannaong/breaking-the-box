@@ -204,7 +204,7 @@
 
             var endf = function(){
                 $("#videoModal").fadeOut();
-               owner.showFinalShit();
+               owner.showFinalScreen();
 
                myPlayer.removeEvent('ended', endf);
 
@@ -232,7 +232,7 @@
 
     },
 
-    showFinalShit:function(){
+    showFinalScreen:function(){
       var owner = this;
 
       if(owner.bFinalState)
